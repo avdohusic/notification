@@ -2,13 +2,13 @@ C:\git\Notification\Notification\bin\Debug\netcoreapp2.1\Notification.deps.json
 C:\git\Notification\Notification\bin\Debug\netcoreapp2.1\Notification.runtimeconfig.json
 C:\git\Notification\Notification\bin\Debug\netcoreapp2.1\Notification.runtimeconfig.dev.json
 C:\git\Notification\Notification\bin\Debug\netcoreapp2.1\Notification.dll
-C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.csprojAssemblyReference.cache
+C:\git\Notification\Notification\bin\Debug\netcoreapp2.1\Notification.pdb
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.csproj.CoreCompileInputs.cache
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.RazorAssemblyInfo.cache
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.RazorAssemblyInfo.cs
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.AssemblyInfoInputs.cache
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.AssemblyInfo.cs
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.RazorTargetAssemblyInfo.cache
-C:\git\Notification\Notification\bin\Debug\netcoreapp2.1\Notification.pdb
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.dll
 C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.pdb
+C:\git\Notification\Notification\obj\Debug\netcoreapp2.1\Notification.csprojAssemblyReference.cache
