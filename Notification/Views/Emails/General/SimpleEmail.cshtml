@@ -1,0 +1,12 @@
+﻿@model Notification.Views.Emails.General.SimpleEmailViewModel
+@{
+    Layout = "_EmailPublicLayout";
+}
+
+@{
+    ViewData["EmailTitle"] = Model.EmailTitle;
+}
+
+<p>
+    @Html.Raw(Model.EmailContent.Replace(Environment.NewLine, "<br />"))
+</p>

@@ -2,7 +2,7 @@
 
 namespace Notification.Jobs
 {
-    interface ISendNotificationJob : IJob
+    public interface ISendNotificationJob : IJob
     {
     }
 }

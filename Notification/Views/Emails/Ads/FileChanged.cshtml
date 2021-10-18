@@ -1,0 +1,46 @@
+﻿@using Notification.Views.Shared
+@model Notification.Views.Emails.Ads.FileChangedViewModel
+
+@{
+    ViewData["EmailTitle"] = "File Changed!";
+}
+
+<p>
+    Hi @Model.FullName, we inform you that Ads.txt file is changed on the site: @Model.SellerDomain
+</p>
+
+<br />
+
+@await Html.PartialAsync("EmailButton", new EmailButtonViewModel("View Details", Model.AdsCheckerUrl))
+
+<br />
+<br />
+
+@{
+    if (Model.FileChange != null && Model.FileChange.Any())
+    {
+        <table border="1px" cellpadding="0" cellspacing="0" width="100%" align="center">
+            <thead>
+            <tr align="center">
+                <td>Adapter Name</td>
+                <td>Missing Line Content</td>
+            </tr>
+            </thead>
+            <tbody>
+            @{
+                foreach (var adsItemDetail in Model.FileChange)
+                {
+                    <tr style="line-height: 25px" align="center">
+                        <td>@adsItemDetail.BidAdapterName</td>
+                        <td>@adsItemDetail.LineContent</td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    }
+}
+
+<p>
+    Email from Ads-Checker Service
+</p>

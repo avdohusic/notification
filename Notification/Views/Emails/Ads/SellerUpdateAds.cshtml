@@ -1,0 +1,12 @@
+﻿@model Notification.Views.Emails.Ads.SellerUpdateAdsViewModel
+@{
+    Layout = "_EmailPublicLayout";
+}
+
+@{
+    ViewData["EmailTitle"] = "Ads File Updated!";
+}
+
+<p>
+    @Html.Raw(Model.EmailContent.Replace(System.Environment.NewLine, "<br />"))
+</p>

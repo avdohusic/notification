@@ -1,0 +1,57 @@
+﻿@using Notification.Views.Shared
+@model Notification.Views.Emails.Ads.DailyReportViewModel
+
+@{
+    ViewData["EmailTitle"] = "Daily Report!";
+}
+
+<p>
+    Hi @Model.FullName, we send you Daily report from Ads Checker Service for date: @Model.LogDate
+</p>
+<p>
+    <strong>ACTIVE/INACTIVE DOMAIN: </strong><span style="color:#008000">@Model.ActiveDomain</span>/<span style="color: #f86c6b;">@Model.InactiveDomain</span><br />
+    <strong>ADS TXT FILE NOT EQUALS: </strong><span style="color: #f86c6b;">@Model.AdsNotEqual</span><br />
+    <strong>ADS TXT FILE NOT FOUND: </strong><span style="color: #f86c6b;">@Model.AdsNotFound</span>
+</p>
+<br />
+@{
+    if (Model.AdsItemError != null && Model.AdsItemError.Any())
+    {
+        <table border="1px" cellpadding="0" cellspacing="0" width="100%" align="center">
+            <thead>
+            <tr align="center">
+                <td>Domain</td>
+                <td>Ads File Status</td>
+                <td>Action</td>
+            </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var adsItemDetail in Model.AdsItemError)
+                    {
+                                <tr style="line-height: 25px" align="center">
+                                    <td>@adsItemDetail.Domain</td>
+                                    <td>
+                                        <span style="font-family: Helvetica, Arial, sans-serif;text-decoration: none; text-transform: uppercase; font-weight: bold; color: #f86c6b; width: auto; text-align: center;">
+                                            @adsItemDetail.FileStatus
+                                        </span>
+                                    </td>
+                                    <td align="center">
+                                        <a href="@adsItemDetail.DetailsUrl" target="_blank" style="font-family: Helvetica, Arial, sans-serif;text-decoration: none; text-transform: uppercase; font-weight: bold; background-color: #0090f1; color: #FFF; width: auto; text-align: center;padding: 1px 4px;border-radius: 3px;">
+                                            Details
+                                        </a>
+                                    </td>
+                                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+}
+
+<br />
+<br />
+
+<p>
+    Email from Ads-Checker Service
+</p>

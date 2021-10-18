@@ -1,0 +1,21 @@
+﻿@using Notification.Views.Shared
+@model Notification.Views.Emails.Ads.MissingFileViewModel
+
+@{
+    ViewData["EmailTitle"] = "Missing File!";
+}
+
+<p>
+    Hi @Model.FullName, we inform you that Ads.txt file missing on the site: @Model.SellerDomain
+</p>
+
+<br />
+
+@await Html.PartialAsync("EmailButton", new EmailButtonViewModel("View Details", Model.AdsCheckerUrl))
+
+<br />
+<br />
+
+<p>
+    Email from Ads-Checker Service
+</p>

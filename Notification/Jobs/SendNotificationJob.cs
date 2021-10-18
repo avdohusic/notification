@@ -1,6 +1,6 @@
-﻿using Notification.Email;
+﻿using System.Threading.Tasks;
+using Notification.Interfaces;
 using Quartz;
-using System.Threading.Tasks;
 
 namespace Notification.Jobs
 {
